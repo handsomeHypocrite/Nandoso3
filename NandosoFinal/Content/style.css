@@ -7,5 +7,55 @@
 
 .space-table>thead>tr>th{
     padding: 40px;
+
 }
 
+
+.b{
+    margin-left: 260px;
+}
+
+.b1{
+    margin-left: 310px;
+}
+.b2{
+
+}
+.b3{
+
+}
+.t1{
+    background-color: white;
+    border-style: double;
+    border-width: 5px;
+    
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 300px;
+    margin-left: 300px;
+    padding-bottom: 50px;
+    font-style:italic;
+    font-size:medium;
+    
+}
+
+.m1{
+        
+    margin-top: 100px;
+   
+    margin-left: 450px;
+    
+   
+}
+
+.m2{
+     margin-left: 300px;
+}
+
+.m3{
+    margin-left:250px;
+}
+
+.m4{
+    margin-left:250px;
+}
