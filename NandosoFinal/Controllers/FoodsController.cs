@@ -12,44 +12,44 @@ using NandosoFinal.Models;
 
 namespace NandosoFinal.Controllers
 {
-    public class DishesController : ApiController
+    public class FoodsController : ApiController
     {
         private NandosoFinalContext db = new NandosoFinalContext();
 
-        // GET: api/Dishes
-        public IQueryable<Dish> GetDishes()
+        // GET: api/Foods
+        public IQueryable<Food> GetFoods()
         {
-            return db.Dishes;
+            return db.Foods;
         }
 
-        // GET: api/Dishes/5
-        [ResponseType(typeof(Dish))]
-        public IHttpActionResult GetDish(int id)
+        // GET: api/Foods/5
+        [ResponseType(typeof(Food))]
+        public IHttpActionResult GetFood(int id)
         {
-            Dish dish = db.Dishes.Find(id);
-            if (dish == null)
+            Food food = db.Foods.Find(id);
+            if (food == null)
             {
                 return NotFound();
             }
 
-            return Ok(dish);
+            return Ok(food);
         }
 
-        // PUT: api/Dishes/5
+        // PUT: api/Foods/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutDish(int id, Dish dish)
+        public IHttpActionResult PutFood(int id, Food food)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != dish.ID)
+            if (id != food.ID)
             {
                 return BadRequest();
             }
 
-            db.Entry(dish).State = EntityState.Modified;
+            db.Entry(food).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +57,7 @@ namespace NandosoFinal.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!DishExists(id))
+                if (!FoodExists(id))
                 {
                     return NotFound();
                 }
@@ -70,35 +70,35 @@ namespace NandosoFinal.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Dishes
-        [ResponseType(typeof(Dish))]
-        public IHttpActionResult PostDish(Dish dish)
+        // POST: api/Foods
+        [ResponseType(typeof(Food))]
+        public IHttpActionResult PostFood(Food food)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Dishes.Add(dish);
+            db.Foods.Add(food);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = dish.ID }, dish);
+            return CreatedAtRoute("DefaultApi", new { id = food.ID }, food);
         }
 
-        // DELETE: api/Dishes/5
-        [ResponseType(typeof(Dish))]
-        public IHttpActionResult DeleteDish(int id)
+        // DELETE: api/Foods/5
+        [ResponseType(typeof(Food))]
+        public IHttpActionResult DeleteFood(int id)
         {
-            Dish dish = db.Dishes.Find(id);
-            if (dish == null)
+            Food food = db.Foods.Find(id);
+            if (food == null)
             {
                 return NotFound();
             }
 
-            db.Dishes.Remove(dish);
+            db.Foods.Remove(food);
             db.SaveChanges();
 
-            return Ok(dish);
+            return Ok(food);
         }
 
         protected override void Dispose(bool disposing)
@@ -110,9 +110,9 @@ namespace NandosoFinal.Controllers
             base.Dispose(disposing);
         }
 
-        private bool DishExists(int id)
+        private bool FoodExists(int id)
         {
-            return db.Dishes.Count(e => e.ID == id) > 0;
+            return db.Foods.Count(e => e.ID == id) > 0;
         }
     }
 }

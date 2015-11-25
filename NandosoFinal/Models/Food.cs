@@ -6,12 +6,12 @@ using Newtonsoft.Json;
 
 namespace NandosoFinal.Models
 {
-    public class Dish
+    public class Food
     {
         public int ID { get; set; }
-        public string DishName { get; set; }
-        public string DishPrice { get; set; }
-        public string Describtion { get; set; }
+        public string FoodName { get; set; }
+        public string FoodPrice { get; set; }
+        public string FoodDesc { get; set; }
 
         //[JsonIgnore]
         //public virtual ICollection<Enrollment> Enrollments { get; set; }
