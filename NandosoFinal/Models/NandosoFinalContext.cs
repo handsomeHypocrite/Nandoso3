@@ -30,12 +30,14 @@ namespace NandosoFinal.Models
             {
                 var foods = new List<Food>
             {
-                new Food { FoodName = "Carsfon",   FoodPrice = "Alexander",
-                    FoodDesc = "ftbs" },
-                    new Food { FoodName = "Carsoadsfn",   FoodPrice = "Alexander",
-                    FoodDesc = "ftbs" },
-                    new Food { FoodName = "Caraaason",   FoodPrice = "Alexander",
-                    FoodDesc = "ftbs" }
+                new Food { FoodName = "8 BBQ Ribs",   FoodPrice = "$1.50",
+                    FoodDesc = "Bite sized chicken on the bone" },
+                    new Food { FoodName = "5 BBQ Wings",   FoodPrice = "$0.50",
+                    FoodDesc = "Reach new heights of enjoyment." },
+                    new Food { FoodName = "Half Chicken",   FoodPrice = "$1.00",
+                    FoodDesc = "Nothing half hearted here." },
+                    new Food { FoodName = "5 BBQ Thigh Fillets",   FoodPrice = "$1.00",
+                    FoodDesc = "Get high on some thighs." }
                 
             };
                 foods.ForEach(s => context.Foods.AddOrUpdate(p => p.FoodName, s));
