@@ -17,7 +17,7 @@ function setupFoodTable(FoodList) {
 
         // Add the columns in the row (td / data cells)
         var FoodNamecol = document.createElement('td');
-        FoodNamecol.innerHTML = FoodList[i].FoodNme;
+        FoodNamecol.innerHTML = FoodList[i].FoodName;
         row.appendChild(FoodNamecol);
 
         var FoodPricecol = document.createElement('td');
