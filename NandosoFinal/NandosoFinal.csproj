@@ -179,6 +179,7 @@
     <Content Include="LiveChat.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\feedback.js" />
     <Content Include="Scripts\FoodModule.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
